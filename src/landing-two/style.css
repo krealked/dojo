@@ -1,0 +1,44 @@
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--gray-200);
+  background: #ffffff;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  color: var(--gray-600);
+  font-size: 1.1rem;
+}

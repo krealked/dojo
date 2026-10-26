@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dojo Task — Навигация по лендингам</title>
+  <link rel="stylesheet" href="/src/shared/styles/reset.css">
+  <link rel="stylesheet" href="/src/shared/styles/variables.css">
+  <style>
+    body {
+      font-family: var(--font-family, system-ui, -apple-system, sans-serif);
+      background-color: var(--bg-color, #f8f9fa);
+      color: var(--text-color, #212529);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    p {
+      color: #6c757d;
+      margin-bottom: 2rem;
+    }
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .btn {
+      display: block;
+      padding: 1rem 1.5rem;
+      background-color: var(--primary-color, #0066ff);
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+    .btn:hover {
+      background-color: var(--primary-hover, #0052cc);
+      transform: translateY(-1px);
+    }
+    .btn:active {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Тестовое задание: Лендинги</h1>
+    <p>Выберите нужный лендинг для просмотра и проверки верстки:</p>
+    <div class="nav-links">
+      <a href="/src/landing-one/" class="btn">Лендинг 1</a>
+      <a href="/src/landing-two/" class="btn">Лендинг 2</a>
+    </div>
+  </div>
+</body>
+</html>

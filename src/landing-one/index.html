@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Додзё Медиа — Цифровое ремесло. Измеримый результат.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oranienbaum&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/styles/reset.css">
+  <link rel="stylesheet" href="../shared/styles/variables.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="/" class="back-link mobile-back">← На главную</a>
+      <a href="#" class="header__logo">Додзё Медиа</a>
+      
+      <!-- Mobile Navigation Overlay (All 4 items consecutive) -->
+      <nav class="header__nav" id="navigation">
+        <ul class="header__nav-list">
+          <li><a href="#projects" class="header__nav-link">Проекты</a></li>
+          <li><a href="#approach" class="header__nav-link">Подход</a></li>
+          <li><a href="#contacts" class="header__nav-link">Контакты</a></li>
+          <li><a href="#contacts" class="btn btn--primary header__nav-cta">Обсудить проект →</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#contacts" class="btn btn--primary header__cta">Обсудить проект →</a>
+        <button class="burger-btn" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+          <span class="burger-line burger-line--top"></span>
+          <span class="burger-line burger-line--mid"></span>
+          <span class="burger-line burger-line--bot"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="container hero__container">
+        <span class="hero__eyebrow">САЙТЫ · ПОИСК · СМЫСЛ</span>
+        
+        <div class="hero__intro">
+          <div class="hero__title-col">
+            <h1 class="hero__title">
+              Цифровое ремесло.<br>
+              Измеримый результат.
+            </h1>
+          </div>
+          <div class="hero__description">
+            <p class="hero__lead">Собираем сайты, поиск и рекламу в единую систему. Помогаем амбициозным брендам расти.</p>
+            <span class="hero__location">ИЗ ЯРОСЛАВЛЯ — В ЛЮБУЮ ТОЧКУ МИРА</span>
+          </div>
+        </div>
+
+        <div class="hero__image-wrapper">
+          <img src="./assets/hero-workshop.png" alt="Команда Додзё Медиа" class="hero__image">
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach" class="approach">
+      <div class="container">
+        <div class="projects__heading">
+          <h2>Наш подход</h2>
+          <span class="projects__meta">Системно</span>
+        </div>
+        <p class="approach__text">Мы не просто верстаем страницы — мы погружаемся в экономику бизнеса клиента, проектируем удобные сценарии и настраиваем эффективный поток заявок из поиска и рекламы.</p>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="projects__heading">
+          <h2>Избранные проекты</h2>
+          <span class="projects__meta">01 — 03</span>
+        </div>
+        
+        <div class="projects__grid">
+          <!-- Project 1: Briskly (Single Link Card) -->
+          <a href="#contacts" class="project-card">
+            <div class="project-card__image-wrapper">
+              <img src="./assets/projects/briskly.png" alt="Брискли" class="project-card__image">
+            </div>
+            <h3 class="project-card__title">БРИСКЛИ</h3>
+            <p class="project-card__tags">Сайт · Брендинг · Реклама</p>
+            <span class="project-card__link">Смотреть проект →</span>
+          </a>
+
+          <!-- Project 2: Trade Overseas (Single Link Card) -->
+          <a href="#contacts" class="project-card">
+            <div class="project-card__image-wrapper">
+              <img src="./assets/projects/trade-overseas.png" alt="Трейд Оверсиз" class="project-card__image">
+            </div>
+            <h3 class="project-card__title">ТРЕЙД ОВЕРСИЗ</h3>
+            <p class="project-card__tags">Сайт · Стратегия · Реклама</p>
+            <span class="project-card__link">Смотреть проект →</span>
+          </a>
+
+          <!-- Project 3: Gostiny Dvor (Single Link Card) -->
+          <a href="#contacts" class="project-card">
+            <div class="project-card__image-wrapper">
+              <img src="./assets/projects/gostiny-dvor.png" alt="Гостиный Двор" class="project-card__image">
+            </div>
+            <h3 class="project-card__title">ГОСТИНЫЙ ДВОР</h3>
+            <p class="project-card__tags">Сайт · Брендинг · Стратегия</p>
+            <span class="project-card__link">Смотреть проект →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contacts & Form Section -->
+  <footer id="contacts" class="footer">
+    <div class="container footer__container">
+      <div class="footer__info">
+        <h2>Обсудить ваш проект</h2>
+        <p class="footer__desc">Оставьте заявку, и мы свяжемся с вами для консультации по вашему будущему проекту.</p>
+        <a href="mailto:hello@dojomedia.ru" class="footer__email">hello@dojomedia.ru</a>
+      </div>
+
+      <div class="footer__form-wrapper">
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name" class="form-label">Ваше имя *</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Иван" data-validate="required min:2">
+          </div>
+
+          <div class="form-group">
+            <label for="phone" class="form-label">Телефон *</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+7 (999) 000-00-00" data-validate="required phone">
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email *</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="name@domain.ru" data-validate="required email">
+          </div>
+
+          <div class="form-group">
+            <label for="comment" class="form-label">Комментарий / тип проекта</label>
+            <textarea id="comment" name="comment" class="form-input form-textarea" placeholder="Расскажите немного о вашей задаче"></textarea>
+          </div>
+
+          <div class="form-group form-group--checkbox">
+            <label class="form-checkbox-label">
+              <input type="checkbox" name="consent" class="form-checkbox" data-validate="required" checked>
+              <span>Согласие на обработку персональных данных</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary form-submit">Обсудить проект →</button>
+          
+          <div id="formSuccess" class="form-success-msg" style="display: none;">
+            Спасибо! Мы свяжемся с вами в ближайшее время.
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span class="footer__copyright">© 2026 Додзё Медиа</span>
+      <span class="footer__tagline">Цифровое ремесло. Измеримый результат.</span>
+    </div>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
