@@ -3,28 +3,250 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лендинг 2 — Dojo Task</title>
-  <script type="module" crossorigin src="/assets/landingTwo-CKVq6cx2.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
-  <link rel="stylesheet" crossorigin href="/assets/landingTwo-DRBkbFrw.css">
+  <title>Стоматологическая клиника — Запись на прием</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/landingTwo-Cso-1sg8.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/validator-G6-GuNfO.js">
+  <link rel="stylesheet" crossorigin href="/assets/landingTwo-DaJ7SOj_.css">
   <link rel="stylesheet" crossorigin href="/assets/variables-C2sqg-iL.css">
 </head>
 <body>
   <header class="header">
-    <div class="container">
+    <div class="container header__container">
       <a href="/" class="back-link">← На главную</a>
-      <h1>Лендинг 2</h1>
+      <a href="#" class="header__logo">Dental Clinic</a>
+      
+      <nav class="header__nav" id="navigation">
+        <ul class="header__nav-list">
+          <li><a href="#services" class="header__nav-link">Услуги</a></li>
+          <li><a href="#booking" class="header__nav-link">Запись</a></li>
+          <li><a href="#contacts" class="header__nav-link">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#booking" class="btn btn--primary header__cta">Записаться</a>
+        <button class="burger-btn" id="burgerBtn" aria-label="Меню" aria-expanded="false">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
     </div>
   </header>
-  
+
   <main class="main">
     <section class="hero">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <span class="hero__badge">Современная стоматология</span>
+          <h1 class="hero__title">Здоровая и красивая улыбка без боли</h1>
+          <p class="hero__lead">Передовое оборудование, опытные врачи и гарантия качества на все виды стоматологических услуг.</p>
+          <a href="#booking" class="btn btn--primary hero__btn">Записаться на консультацию</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section (9 items) -->
+    <section id="services" class="services">
       <div class="container">
-        <h2>Добро пожаловать на Лендинг 2</h2>
-        <p>Макет ожидает загрузки данных из Figma.</p>
+        <div class="services__header">
+          <h2 class="services__title">Услуги</h2>
+          <div class="services__controls">
+            <button class="carousel-btn prev-btn" aria-label="Назад">←</button>
+            <button class="carousel-btn next-btn" aria-label="Вперед">→</button>
+          </div>
+        </div>
+
+        <div class="services__carousel-wrapper">
+          <div class="services__grid" id="servicesGrid">
+            <!-- 1. Элайнеры -->
+            <article class="service-card" style="background-image: url('/assets/aligners-C-T-xDCy.png');">
+              <div class="service-card__overlay">
+                <h3 class="service-card__name">Элайнеры</h3>
+                <div class="service-card__footer">
+                  <a href="#booking" class="service-card__consult-btn">
+                    <span class="consult-text">Консультация</span>
+                    <span class="consult-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2. Имплантация -->
+            <article class="service-card" style="background-image: url('/assets/implant-cpi4xwxG.png');">
+              <div class="service-card__overlay">
+                <h3 class="service-card__name">Имплантация</h3>
+                <div class="service-card__footer">
+                  <a href="#booking" class="service-card__consult-btn">
+                    <span class="consult-text">Консультация</span>
+                    <span class="consult-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3. Брекеты -->
+            <article class="service-card" style="background-image: url('/assets/braces-BrvgbyWU.png');">
+              <div class="service-card__overlay">
+                <h3 class="service-card__name">Брекеты</h3>
+                <div class="service-card__footer">
+                  <a href="#booking" class="service-card__consult-btn">
+                    <span class="consult-text">Консультация</span>
+                    <span class="consult-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4. Терапия -->
+            <article class="service-card" style="background-image: url('/assets/aligners-C-T-xDCy.png');">
+              <div class="service-card__overlay">
+                <h3 class="service-card__name">Терапия</h3>
+                <div class="service-card__footer">
+                  <a href="#booking" class="service-card__consult-btn">
+                    <span class="consult-text">Консультация</span>
+                    <span class="consult-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5. Гигиена полости рта -->
+            <article class="service-card" style="background-image: url('/assets/implant-cpi4xwxG.png');">
+              <div class="service-card__overlay">
+                <h3 class="service-card__name">Гигиена полости рта</h3>
+                <div class="service-card__footer">
+                  <a href="#booking" class="service-card__consult-btn">
+                    <span class="consult-text">Консультация</span>
+                    <span class="consult-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6. Хирургия -->
+            <article class="service-card" style="background-image: url('/assets/braces-BrvgbyWU.png');">
+              <div class="service-card__overlay">
+                <h3 class="service-card__name">Хирургия</h3>
+                <div class="service-card__footer">
+                  <a href="#booking" class="service-card__consult-btn">
+                    <span class="consult-text">Консультация</span>
+                    <span class="consult-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 7. Гнатология -->
+            <article class="service-card" style="background-image: url('/assets/aligners-C-T-xDCy.png');">
+              <div class="service-card__overlay">
+                <h3 class="service-card__name">Гнатология</h3>
+                <div class="service-card__footer">
+                  <a href="#booking" class="service-card__consult-btn">
+                    <span class="consult-text">Консультация</span>
+                    <span class="consult-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 8. Протезирование -->
+            <article class="service-card" style="background-image: url('/assets/implant-cpi4xwxG.png');">
+              <div class="service-card__overlay">
+                <h3 class="service-card__name">Протезирование</h3>
+                <div class="service-card__footer">
+                  <a href="#booking" class="service-card__consult-btn">
+                    <span class="consult-text">Консультация</span>
+                    <span class="consult-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 9. Эстетическая стоматология -->
+            <article class="service-card" style="background-image: url('/assets/braces-BrvgbyWU.png');">
+              <div class="service-card__overlay">
+                <h3 class="service-card__name">Эстетическая стоматология</h3>
+                <div class="service-card__footer">
+                  <a href="#booking" class="service-card__consult-btn">
+                    <span class="consult-text">Консультация</span>
+                    <span class="consult-arrow">→</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Booking Form Section -->
+    <section id="booking" class="booking">
+      <div class="container booking__container">
+        <div class="booking__info">
+          <h2>Онлайн-запись на прием</h2>
+          <p>Заполните форму, и наш администратор свяжется с вами в течение 10 минут для подтверждения времени визита.</p>
+        </div>
+
+        <div class="booking__form-wrapper">
+          <form id="bookingForm" class="booking-form" novalidate>
+            <div class="form-group">
+              <label for="clientName" class="form-label">Ваше имя *</label>
+              <input type="text" id="clientName" name="clientName" class="form-input" placeholder="Введите ваше имя" data-validate="required min:2">
+            </div>
+
+            <div class="form-group">
+              <label for="clientPhone" class="form-label">Телефон *</label>
+              <input type="tel" id="clientPhone" name="clientPhone" class="form-input" placeholder="+7 (999) 000-00-00" data-validate="required phone">
+            </div>
+
+            <div class="form-group">
+              <label for="serviceSelect" class="form-label">Выберите услугу</label>
+              <select id="serviceSelect" name="serviceSelect" class="form-input">
+                <option value="Элайнеры">Элайнеры</option>
+                <option value="Имплантация">Имплантация</option>
+                <option value="Брекеты">Брекеты</option>
+                <option value="Терапия">Терапия</option>
+                <option value="Гигиена полости рта">Гигиена полости рта</option>
+                <option value="Хирургия">Хирургия</option>
+                <option value="Гнатология">Гнатология</option>
+                <option value="Протезирование">Протезирование</option>
+                <option value="Эстетическая стоматология">Эстетическая стоматология</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="visitDate" class="form-label">Желаемая дата и время</label>
+              <input type="datetime-local" id="visitDate" name="visitDate" class="form-input" data-validate="required">
+            </div>
+
+            <div class="form-group form-group--checkbox">
+              <label class="form-checkbox-label">
+                <input type="checkbox" name="consent" class="form-checkbox" data-validate="required" checked>
+                <span>Я согласен на обработку персональных данных</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn--primary form-submit">Подтвердить запись</button>
+            
+            <div id="bookingSuccess" class="form-success-msg" style="display: none;">
+              Заявка успешно отправлена! Ждем вас в клинике.
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
+
+  <footer id="contacts" class="footer">
+    <div class="container footer__bottom">
+      <span>© 2026 Dental Clinic. Все права защищены.</span>
+      <a href="tel:+74950000000" class="footer__phone">+7 (495) 000-00-00</a>
+    </div>
+  </footer>
 
 </body>
 </html>
