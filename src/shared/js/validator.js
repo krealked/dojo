@@ -35,6 +35,7 @@ export function initFormValidator(formSelector, successCallback) {
   const fields = form.querySelectorAll('[data-validate]');
 
   fields.forEach(field => {
+    const isCheckbox = field.type === 'checkbox';
     const rulesNames = field.getAttribute('data-validate').split(' ');
     const rules = rulesNames.map(name => {
       if (name === 'required') return validators.required;
@@ -48,8 +49,16 @@ export function initFormValidator(formSelector, successCallback) {
     }).filter(Boolean);
 
     const validate = () => {
-      const errorMsg = validateField(field.value, rules);
-      const formGroup = field.closest('.form-group') || field.parentElement;
+      let errorMsg = null;
+      if (isCheckbox) {
+        if (rulesNames.includes('required') && !field.checked) {
+          errorMsg = 'Необходимо согласие на обработку данных';
+        }
+      } else {
+        errorMsg = validateField(field.value, rules);
+      }
+
+      const formGroup = field.closest('.form-group') || field.closest('.form-group--checkbox-custom') || field.parentElement;
       let errorEl = formGroup.querySelector('.form-error');
 
       if (errorMsg) {
@@ -64,7 +73,7 @@ export function initFormValidator(formSelector, successCallback) {
         return false;
       } else {
         field.classList.remove('is-invalid');
-        if (field.value.trim() !== '') {
+        if (!isCheckbox && field.value.trim() !== '') {
           field.classList.add('is-valid');
         } else {
           field.classList.remove('is-valid');
@@ -76,12 +85,16 @@ export function initFormValidator(formSelector, successCallback) {
       }
     };
 
-    field.addEventListener('blur', validate);
-    field.addEventListener('input', () => {
-      if (field.classList.contains('is-invalid')) {
-        validate();
-      }
-    });
+    if (isCheckbox) {
+      field.addEventListener('change', validate);
+    } else {
+      field.addEventListener('blur', validate);
+      field.addEventListener('input', () => {
+        if (field.classList.contains('is-invalid')) {
+          validate();
+        }
+      });
+    }
   });
 
   form.addEventListener('submit', (e) => {
@@ -89,6 +102,7 @@ export function initFormValidator(formSelector, successCallback) {
     let isValid = true;
 
     fields.forEach(field => {
+      const isCheckbox = field.type === 'checkbox';
       const rulesNames = field.getAttribute('data-validate').split(' ');
       const rules = rulesNames.map(name => {
         if (name === 'required') return validators.required;
@@ -101,8 +115,16 @@ export function initFormValidator(formSelector, successCallback) {
         return null;
       }).filter(Boolean);
 
-      const errorMsg = validateField(field.value, rules);
-      const formGroup = field.closest('.form-group') || field.parentElement;
+      let errorMsg = null;
+      if (isCheckbox) {
+        if (rulesNames.includes('required') && !field.checked) {
+          errorMsg = 'Необходимо согласие на обработку данных';
+        }
+      } else {
+        errorMsg = validateField(field.value, rules);
+      }
+
+      const formGroup = field.closest('.form-group') || field.closest('.form-group--checkbox-custom') || field.parentElement;
       let errorEl = formGroup.querySelector('.form-error');
 
       if (errorMsg) {
@@ -115,22 +137,13 @@ export function initFormValidator(formSelector, successCallback) {
         }
         errorEl.textContent = errorMsg;
         isValid = false;
+      } else {
+        field.classList.remove('is-invalid');
+        if (errorEl) {
+          errorEl.remove();
+        }
       }
     });
-
-    // Check agreement checkbox if present
-    const checkbox = form.querySelector('input[type="checkbox"][data-validate="required"]');
-    if (checkbox && !checkbox.checked) {
-      isValid = false;
-      const group = checkbox.closest('.form-group') || checkbox.parentElement;
-      let err = group.querySelector('.form-error');
-      if (!err) {
-        err = document.createElement('div');
-        err.className = 'form-error';
-        group.appendChild(err);
-      }
-      err.textContent = 'Необходимо согласие на обработку данных';
-    }
 
     if (isValid) {
       if (typeof successCallback === 'function') {

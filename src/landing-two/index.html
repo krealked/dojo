@@ -62,92 +62,128 @@
         <div class="services__carousel-wrapper">
           <div class="services__grid" id="servicesGrid">
             <!-- 1. Элайнеры -->
-            <article class="service-card" style="background-image: url('./assets/services/aligners.png');">
-              <div class="service-card__overlay"></div>
-              <h3 class="service-card__name">Элайнеры</h3>
+            <article class="service-card service-card--aligners" style="--bg-desktop: url('./assets/services/aligners.png'); --bg-mobile: url('./assets/services/mobile1.png');">
+              <div class="service-card__photo" style="background-image: var(--bg-desktop);">
+                <div class="service-card__overlay"></div>
+                <h3 class="service-card__name">Элайнеры</h3>
+              </div>
               <a href="#booking" class="service-card__consult-btn">
                 <span class="consult-text">Консультация</span>
-                <span class="consult-arrow">→</span>
+                <span class="consult-arrow">
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
               </a>
             </article>
 
             <!-- 2. Имплантация -->
-            <article class="service-card" style="background-image: url('./assets/services/implant.png');">
-              <div class="service-card__overlay"></div>
-              <h3 class="service-card__name">Имплантация</h3>
+            <article class="service-card service-card--implant" style="--bg-desktop: url('./assets/services/implant.png'); --bg-mobile: url('./assets/services/mobile2.png');">
+              <div class="service-card__photo" style="background-image: var(--bg-desktop);">
+                <div class="service-card__overlay"></div>
+                <h3 class="service-card__name">Имплантация</h3>
+              </div>
               <a href="#booking" class="service-card__consult-btn">
                 <span class="consult-text">Консультация</span>
-                <span class="consult-arrow">→</span>
+                <span class="consult-arrow">
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
               </a>
             </article>
 
             <!-- 3. Брекеты -->
-            <article class="service-card" style="background-image: url('./assets/services/braces.png');">
-              <div class="service-card__overlay"></div>
-              <h3 class="service-card__name">Брекеты</h3>
+            <article class="service-card service-card--braces" style="--bg-desktop: url('./assets/services/braces.png'); --bg-mobile: url('./assets/services/mobile3.png');">
+              <div class="service-card__photo" style="background-image: var(--bg-desktop);">
+                <div class="service-card__overlay"></div>
+                <h3 class="service-card__name">Брекеты</h3>
+              </div>
               <a href="#booking" class="service-card__consult-btn">
                 <span class="consult-text">Консультация</span>
-                <span class="consult-arrow">→</span>
+                <span class="consult-arrow">
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
               </a>
             </article>
 
             <!-- 4. Терапия -->
-            <article class="service-card" style="background-image: url('./assets/services/aligners.png');">
-              <div class="service-card__overlay"></div>
-              <h3 class="service-card__name">Терапия</h3>
+            <article class="service-card service-card--therapy" style="--bg-desktop: url('./assets/services/aligners.png'); --bg-mobile: url('./assets/services/mobile1.png');">
+              <div class="service-card__photo" style="background-image: var(--bg-desktop);">
+                <div class="service-card__overlay"></div>
+                <h3 class="service-card__name">Терапия</h3>
+              </div>
               <a href="#booking" class="service-card__consult-btn">
                 <span class="consult-text">Консультация</span>
-                <span class="consult-arrow">→</span>
+                <span class="consult-arrow">
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
               </a>
             </article>
 
             <!-- 5. Гигиена полости рта -->
-            <article class="service-card" style="background-image: url('./assets/services/implant.png');">
-              <div class="service-card__overlay"></div>
-              <h3 class="service-card__name">Гигиена полости рта</h3>
+            <article class="service-card service-card--hygiene" style="--bg-desktop: url('./assets/services/implant.png'); --bg-mobile: url('./assets/services/mobile2.png');">
+              <div class="service-card__photo" style="background-image: var(--bg-desktop);">
+                <div class="service-card__overlay"></div>
+                <h3 class="service-card__name">Гигиена полости рта</h3>
+              </div>
               <a href="#booking" class="service-card__consult-btn">
                 <span class="consult-text">Консультация</span>
-                <span class="consult-arrow">→</span>
+                <span class="consult-arrow">
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
               </a>
             </article>
 
             <!-- 6. Хирургия -->
-            <article class="service-card" style="background-image: url('./assets/services/braces.png');">
-              <div class="service-card__overlay"></div>
-              <h3 class="service-card__name">Хирургия</h3>
+            <article class="service-card service-card--surgery" style="--bg-desktop: url('./assets/services/braces.png'); --bg-mobile: url('./assets/services/mobile3.png');">
+              <div class="service-card__photo" style="background-image: var(--bg-desktop);">
+                <div class="service-card__overlay"></div>
+                <h3 class="service-card__name">Хирургия</h3>
+              </div>
               <a href="#booking" class="service-card__consult-btn">
                 <span class="consult-text">Консультация</span>
-                <span class="consult-arrow">→</span>
+                <span class="consult-arrow">
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
               </a>
             </article>
 
             <!-- 7. Гнатология -->
-            <article class="service-card" style="background-image: url('./assets/services/aligners.png');">
-              <div class="service-card__overlay"></div>
-              <h3 class="service-card__name">Гнатология</h3>
+            <article class="service-card service-card--gnathology" style="--bg-desktop: url('./assets/services/aligners.png'); --bg-mobile: url('./assets/services/mobile1.png');">
+              <div class="service-card__photo" style="background-image: var(--bg-desktop);">
+                <div class="service-card__overlay"></div>
+                <h3 class="service-card__name">Гнатология</h3>
+              </div>
               <a href="#booking" class="service-card__consult-btn">
                 <span class="consult-text">Консультация</span>
-                <span class="consult-arrow">→</span>
+                <span class="consult-arrow">
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
               </a>
             </article>
 
             <!-- 8. Протезирование -->
-            <article class="service-card" style="background-image: url('./assets/services/implant.png');">
-              <div class="service-card__overlay"></div>
-              <h3 class="service-card__name">Протезирование</h3>
+            <article class="service-card service-card--prosthetics" style="--bg-desktop: url('./assets/services/implant.png'); --bg-mobile: url('./assets/services/mobile2.png');">
+              <div class="service-card__photo" style="background-image: var(--bg-desktop);">
+                <div class="service-card__overlay"></div>
+                <h3 class="service-card__name">Протезирование</h3>
+              </div>
               <a href="#booking" class="service-card__consult-btn">
                 <span class="consult-text">Консультация</span>
-                <span class="consult-arrow">→</span>
+                <span class="consult-arrow">
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
               </a>
             </article>
 
             <!-- 9. Эстетическая стоматология -->
-            <article class="service-card" style="background-image: url('./assets/services/braces.png');">
-              <div class="service-card__overlay"></div>
-              <h3 class="service-card__name">Эстетическая стоматология</h3>
+            <article class="service-card service-card--aesthetic" style="--bg-desktop: url('./assets/services/braces.png'); --bg-mobile: url('./assets/services/mobile3.png');">
+              <div class="service-card__photo" style="background-image: var(--bg-desktop);">
+                <div class="service-card__overlay"></div>
+                <h3 class="service-card__name">Эстетическая стоматология</h3>
+              </div>
               <a href="#booking" class="service-card__consult-btn">
                 <span class="consult-text">Консультация</span>
-                <span class="consult-arrow">→</span>
+                <span class="consult-arrow">
+                  <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
               </a>
             </article>
           </div>
@@ -175,12 +211,16 @@
           </svg>
 
           <!-- Mobile Rotated SVG Banner Background -->
-          <svg class="booking-banner__vector-bg booking-banner__vector-bg--mobile" viewBox="0 0 354 1199" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <svg class="booking-banner__vector-bg booking-banner__vector-bg--mobile" viewBox="0 0 323 1199" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <defs>
-              <linearGradient id="paint0_radial_mobile" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient id="paint0_radial_mobile" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" stop-color="#233A5A"/>
                 <stop offset="100%" stop-color="#3C6AB9"/>
               </linearGradient>
+              <clipPath id="mobileModelClip" clipPathUnits="objectBoundingBox">
+                <path d="M1145.3 14.6296L1184.34 53.6346C1193.73 63.0127 1199 75.7368 1199 89.005V293C1199 309.569 1185.57 323 1169 323H127.378C114.125 323 101.413 317.738 92.0378 308.37L52.9996 269.365C43.6136 259.987 38.34 247.263 38.34 233.995V182.378C38.34 169.117 33.0721 156.4 23.6953 147.023L14.6447 137.972C5.26782 128.595 0 115.878 0 102.617V30C0 13.4315 13.4315 0 30 0H1109.96C1123.22 0 1135.93 5.26202 1145.3 14.6296Z"
+                      transform="scale(0.00309597523, 0.00083402835) rotate(-90) translate(-1199, 0)"/>
+              </clipPath>
             </defs>
             <path d="M1145.3 14.6296L1184.34 53.6346C1193.73 63.0127 1199 75.7368 1199 89.005V293C1199 309.569 1185.57 323 1169 323H127.378C114.125 323 101.413 317.738 92.0378 308.37L52.9996 269.365C43.6136 259.987 38.34 247.263 38.34 233.995V182.378C38.34 169.117 33.0721 156.4 23.6953 147.023L14.6447 137.972C5.26782 128.595 0 115.878 0 102.617V30C0 13.4315 13.4315 0 30 0H1109.96C1123.22 0 1135.93 5.26202 1145.3 14.6296Z"
                   transform="rotate(-90) translate(-1199, 0)"
@@ -188,10 +228,10 @@
           </svg>
           <div class="booking-banner__content-col">
             <h2 class="booking-banner__title">
-              Запишитесь на бесплатную<br>консультацию прямо сейчас!
+              Запишитесь<br class="booking-banner__br--mobile"> на бесплатную<br class="booking-banner__br--desktop"> консультацию прямо<br class="booking-banner__br--mobile"> сейчас!
             </h2>
             <p class="booking-banner__subtitle">
-              Хотите узнать подробнее? Наши специалисты ответят на все ваши вопросы и помогут<br>выбрать оптимальный путь к здоровой и красивой улыбке.
+              Хотите узнать подробнее? Наши<br class="booking-banner__br--mobile"> специалисты ответят на все ваши<br class="booking-banner__br--mobile"> вопросы и помогут<br class="booking-banner__br--desktop"> выбрать<br class="booking-banner__br--mobile"> оптимальный путь к здоровой и<br class="booking-banner__br--mobile"> красивой улыбке.
             </p>
 
             <form id="bookingForm" class="booking-banner__form" novalidate>
@@ -220,7 +260,10 @@
             </form>
           </div>
           <div class="booking-banner__image-col">
-            <img src="./assets/services/model-89.png" alt="Модель" class="booking-banner__model">
+            <picture class="booking-banner__picture">
+              <source media="(max-width: 1023px)" srcset="./assets/services/model-mobile.png">
+              <img src="./assets/services/model-89.png" alt="Модель" class="booking-banner__model">
+            </picture>
           </div>
         </div>
       </div>
